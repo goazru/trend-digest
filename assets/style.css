@@ -5,7 +5,7 @@
   /* セクションごとのアクセント色 */
   --c-yt: #ff4d4d; --c-mv: #ff9f43; --c-ig: #e1306c; --c-food: #ffcc4d;
   --c-fashion: #c084fc; --c-living: #4ade80; --c-x: #cbd5e1; --c-tt: #25f4ee;
-  --c-reels: #f472b6; --c-sum: #57f287; --c-gp: #60a5fa;
+  --c-reels: #f472b6; --c-sum: #57f287; --c-gp: #60a5fa; --c-gpe: #818cf8; --c-gpa: #d9a05b;
 }
 * { box-sizing: border-box; }
 html { color-scheme: dark; scroll-behavior: smooth; }
@@ -25,6 +25,8 @@ a:hover { text-decoration: underline; }
 [data-accent="tt"] { --sec: var(--c-tt); }
 [data-accent="reels"] { --sec: var(--c-reels); }
 [data-accent="gp"] { --sec: var(--c-gp); }
+[data-accent="gpe"] { --sec: var(--c-gpe); }
+[data-accent="gpa"] { --sec: var(--c-gpa); }
 [data-accent="sum"] { --sec: var(--c-sum); }
 
 /* ヘッダー */
