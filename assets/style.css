@@ -32,6 +32,8 @@ a:hover { text-decoration: underline; }
 [data-accent="g2"] { --sec: #94a3b8; }
 [data-accent="g3"] { --sec: #34d399; }
 [data-accent="g4"] { --sec: #fbbf24; }
+[data-accent="g5"] { --sec: #60a5fa; }
+[data-accent="g6"] { --sec: #a78bfa; }
 .newdot.cat { background: rgba(0,0,0,.72); color: #e8eaf0; font-weight: 500; }
 .thumb.broken { background: #15181f; }
 .thumb.broken::after { content: "🎰"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 34px; opacity: .5; }
