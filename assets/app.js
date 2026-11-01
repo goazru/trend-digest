@@ -18,6 +18,25 @@ document.addEventListener("click", function (ev) {
   card.classList.add("playing");
 });
 
+// 開催地の絞り込み: セクション内のカードを地域で出し分ける
+document.addEventListener("click", function (ev) {
+  var btn = ev.target.closest(".regionfilter button");
+  if (!btn) return;
+  var section = btn.closest("section");
+  var want = btn.getAttribute("data-region") || "";
+  section.querySelectorAll(".regionfilter button").forEach(function (b) {
+    b.classList.toggle("active", b === btn);
+  });
+  section.querySelectorAll(".card[data-region]").forEach(function (c) {
+    c.classList.toggle("region-hidden", want !== "" && c.getAttribute("data-region") !== want);
+  });
+  // 中身が無くなったカテゴリの見出しごと隠す
+  section.querySelectorAll(".gpgroup").forEach(function (g) {
+    var left = g.querySelectorAll(".card[data-region]:not(.region-hidden)").length;
+    g.classList.toggle("region-hidden", left === 0);
+  });
+});
+
 // 追従バー: 今いるセクションを表示し、該当チップを強調する
 (function () {
   var bar = document.getElementById("toc");
